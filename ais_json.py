@@ -93,9 +93,9 @@ while True:
       r = requests.post(URL, files={'jsonais': (None, post)})
 
       if 'shipname' in ais:
-        print 'Message type: ' + str(ais['msgtype']) + ' mmsi: ' + str(ais['mmsi']) + ' name: ' + ais['shipname']
+        print('Message type: ' + str(ais['msgtype']) + ' mmsi: ' + str(ais['mmsi']) + ' name: ' + ais['shipname'])
       else:
-        print 'Message type: ' + str(ais['msgtype']) + ' mmsi: ' + str(ais['mmsi'])
+        print('Message type: ' + str(ais['msgtype']) + ' mmsi: ' + str(ais['mmsi']))
 
 
       #dump non common packets for debugging
@@ -106,6 +106,6 @@ while True:
       #  print 'Post:', post
       #  print 'Result:', json.loads(r.text)['description']
     except requests.exceptions.RequestException as e:
-      print e
+      print(e)
     except Exception as e:
-      print e
+      print(e)
